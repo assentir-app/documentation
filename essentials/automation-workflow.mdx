@@ -1,0 +1,107 @@
+---
+title: Automation Workflows
+description: Learn how to automate repetitive tasks and streamline deal management processes in Assentir with Automation Workflows.
+icon: rocket
+---
+# Automation Workflows
+
+## Overview
+
+Automation Workflows in **Assentir** enable you to automate routine tasks, such as sending notifications or updating deal stages. While the feature set is simple, it allows you to streamline essential actions based on specific events, ensuring a smoother workflow with less manual intervention.
+
+### Key Features
+
+- **Single Trigger**: Automate tasks based on a specific trigger, such as the creation or update of a deal.
+- **Automated Actions**: Automatically perform actions like sending notifications or changing the deal stage.
+- **Basic Conditions**: Add simple conditions to ensure that workflows run only when the right criteria are met.
+
+### Benefits
+
+- **Time-Saving**: Automate frequent actions like notifications, reducing manual effort.
+- **Consistency**: Ensure deal management processes are executed in a uniform and timely manner.
+- **Simplified Workflow**: Automatically handle key steps without interrupting your workflow.
+
+---
+
+## Creating an Automation Workflow
+
+### Step 1: Access the Workflows Section
+
+1. Log in to **Assentir**.
+2. From the dashboard, navigate to the **Workflows** section.
+
+### Step 2: Select a Trigger
+
+Choose a trigger to determine when the workflow should start. Available triggers include:
+
+- Deal Created
+- Deal Stage changed
+- Deal Status changed
+- Company Created
+- Contact Created
+- Document Status Changed
+
+### Step 3: Define an Action
+
+After selecting the trigger, define what action should occur. Assentir provides the following options:
+
+- **Create Activity**: Automatically creates an activity based on the trigger.
+- **Trigger Webhook**: Executes an HTTP POST request to an external URL with the data from the triggered event.
+- **Send Email**: Sends an email related to the event and links it to the relevant record.
+- **Mark Associated Deals as Won**
+- **Mark Associated Deals as Lost**
+- **Mark Associated Activity as Completed**
+<Tip>
++ Not every action is available for all triggers. Some are specific to certain triggers.
++ Actions do not execute during data import
+</Tip>
+
+### Step 4: Apply Conditional Logic (Optional)
+
+You can add simple conditions to control when the workflow will execute. For example:
+
+- **Condition**: Only send a notification if the deal's value exceeds a specific threshold.
+- **Condition**: Change the deal stage only if the current stage is “Prospecting.”
+
+### Step 5: Activate the Workflow
+
+Once the workflow is configured with triggers, actions, and conditions, test it to ensure it functions as expected. After testing, click **Activate** to enable the workflow.
+
+---
+
+## Managing Workflows
+
+### Editing Workflows
+
+1. Navigate to the **Workflows** section in your dashboard.
+2. Select the workflow you wish to modify.
+3. Update the triggers, actions, or conditions as necessary.
+
+### Deactivating or Deleting Workflows
+
+- **Deactivate**: Temporarily suspend a workflow without deleting it.
+- **Delete**: Permanently remove the workflow if it’s no longer needed.
+
+---
+
+## Best Practices
+
+- **Keep It Simple**: Start with basic workflows to handle common tasks like notifications and deal updates.
+- **Regular Review**: Periodically review your workflows to ensure they align with your current processes.
+- **Avoid Over-Automation**: Focus on automating tasks that truly improve efficiency without complicating your system.
+
+---
+
+## FAQs
+
+**Q1. Can I use more than one trigger in a single workflow?**
+
+No, each workflow can only have one trigger. However, you can create multiple workflows for different triggers.
+
+**Q2. Can I pause an active workflow?**
+
+Yes, workflows can be deactivated without being deleted. This allows you to temporarily suspend them and reactivate when needed.
+
+**Q3. Will I receive notifications if a workflow fails?**
+
+Yes, Assentir will notify you if a workflow fails to execute correctly due to system errors or misconfigurations.
