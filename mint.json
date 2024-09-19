@@ -3,7 +3,8 @@
   "name": "Assentir CRM Documentation",
   "logo": {
     "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "light": "/logo/light.svg",
+    "href": "https://www.assentir.com"
   },
   "metadata": {
     "og:image": "/logo/light.svg"
@@ -45,19 +46,19 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://help.assentir.com/"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://assentir.com/contact"
+      "name": "Support",
+      "icon": "help",
+      "url": "https://help.assentir.com"
     },
     {
       "name": "Blog",
       "icon": "newspaper",
       "url": "https://assentir.com/blog"
+    },
+    {
+      "name": "Contact Sales",
+      "icon": "book-open-cover",
+      "url": "https://www.assentir.com/contact"
     }
   ],
   "navigation": [
