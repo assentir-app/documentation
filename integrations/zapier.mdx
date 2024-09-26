@@ -1,0 +1,71 @@
+---
+title: Zapier 
+description: Step-by-step guide to integrate zAPIER with Assentir for connecting with other applications.
+icon: circle-nodes
+---
+
+## Overview
+
+Zapier allows you to automate tasks between Assentir and thousands of other apps without writing any code. By setting up "Zaps" (automated workflows), you can automatically trigger actions in Assentir when certain events happen in other apps, and vice versa. This guide will walk you through the process of setting up Zapier integration with Assentir.
+
+## Prerequisites
+
+Before starting the integration, ensure that you have the following:
+1. A **Zapier** account. If you don’t have one, sign up at [Zapier](https://zapier.com/).
+2. Access to **Assentir** with API integration enabled.
+
+## Step-by-Step Setup
+
+### Step 1: Generate an API Key in Assentir CRM
+
+1. Log in to **Assentir**.
+2. Go to **Settings** > **Integrations** > **Zapier**.
+3. Click **Create New API Key**.
+4. Give the API key a name (e.g., "Zapier Integration") and select the permissions you want to grant to Zapier.
+5. Click **Generate Key** and copy the API key.
+6. Click the link to Zapier and accept the invite to Zapier
+
+### Step 2: Set Up a Zap in Zapier
+1. Log in to **Zapier**.
+2. Click **Create Zap** in the upper-left corner.
+3. Choose a **Trigger App** (this is the app that will start the workflow). For example, if you want to create a new deal in Assentir when a new row is added to a Google Sheet, select **Google Sheets** as your trigger app.
+4. Set up the **Trigger Event**. Follow the prompts to connect your Trigger App and configure the event.
+
+### Step 3: Connect Assentir to Zapier
+
+1. In the next step, search for **Assentir** as the **Action App**.
+2. Choose the **Action Event** that will happen in Assentir (e.g., "Create Deal" or "Create Contact").
+3. Zapier will prompt you to connect your Assentir account. Paste the **API Key** you generated earlier.
+4. Once connected, map the data from your Trigger App (e.g., Google Sheets) to the fields in Assentir (e.g., Name, Email, Phone Number).
+
+### Step 4: Test the Zap
+
+1. After setting up the action, Zapier will prompt you to test the Zap.
+2. Run the test to ensure that everything is working as expected.
+3. If successful, you will see a new deal, contact, or the action you configured appear in Assentir.
+
+### Step 5: Activate the Zap
+
+1. Once the test is successful, turn on the Zap.
+2. Zapier will now automate the workflow based on the trigger and action you've set up.
+
+## Best Practices
+
+1. **Use Clear Naming Conventions**: When creating Zaps, use clear and descriptive names so you can easily identify their purpose later.
+2. **Test Your Zaps Regularly**: Periodically test your Zaps to ensure they are functioning correctly, especially after making changes to either Assentir or the Trigger App.
+3. **Monitor Task Usage**: Zapier limits the number of tasks based on your pricing plan. Keep track of your task usage to avoid running out.
+
+## FAQs
+
+**Q1: Can I connect multiple apps to Assentir through Zapier?**  
+Yes, you can connect Assentir with thousands of apps available on Zapier to create automated workflows.
+
+**Q2: What happens if a Zap fails?**  
+If a Zap fails, Zapier will notify you via email and provide a detailed error log. You can use this log to troubleshoot the issue.
+
+**Q3: How do I disconnect Zapier from Assentir?**  
+You can revoke the API key from Assentir’s **API Keys** section under **Settings**.
+
+**Q4: Can I use multiple API keys for different Zaps?**  
+Yes, you can generate multiple API keys in Assentir and use them for different Zaps as needed.
+

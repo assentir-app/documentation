@@ -76,6 +76,13 @@
       ]
     },
     {
+      "group": "Integrations",
+      "pages": [
+        "integrations/twilio",
+        "integrations/zapier"
+      ]
+    },
+    {
       "group": "API Documentation",
       "pages": [
         "api-reference/introduction"
