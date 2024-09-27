@@ -46,8 +46,8 @@
   ],
   "anchors": [
     {
-      "name": "Support",
-      "icon": "help",
+      "name": "Get Help",
+      "icon": "question",
       "url": "https://help.assentir.com"
     },
     {
@@ -57,7 +57,7 @@
     },
     {
       "name": "Contact Sales",
-      "icon": "book-open-cover",
+      "icon": "envelope",
       "url": "https://www.assentir.com/contact"
     }
   ],
@@ -65,7 +65,10 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction"
+        "introduction",
+        "system-email",
+        "brands",
+        "calendar"
       ]
     },
     {

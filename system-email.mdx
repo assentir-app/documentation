@@ -1,0 +1,112 @@
+---
+title: Configure Email Account
+icon: envelopes
+---
+
+If you have previously connected inbox email accounts (Otherwise [set one up](#connect-email-account)), you should choose one of the connected email accounts to act as a general email account 
+that the system will use to send system-related emails like user assigned to contact, activity due reminders, etc...
+
+## Inbox Email Accounts
+
+To use the inbox feature, you will need to connect email accounts. Assentir CRM allows you to connect shared and personal email accounts.
+<Note>
+ The inbox email accounts feature is a 2-way sync and Assentir CRM auto-associates of the emails to the related record records.
+</Note>
+
+
+### Shared Email Accounts
+Shared email accounts are available in Assentir CRM for all users with granted access to a "shared inbox."
+
+In most cases, the shared accounts will be general email addresses like sales@company.com or info@company.com
+
+<Note>
+ Only administrators can connect shared email accounts in the application.
+</Note>
+
+### Personal Email Accounts
+The personal email accounts are personal for the logged-in user, this means that no other user will be able to view and interact with the account emails.
+
+<Note>
+ Even though the account is called "personal", emails from the account associated with contacts that can be seen by other sales reps will displayed in the contact profile. 
+</Note>
+
+## Connect Email Account
+To connect an email account, go to the main menu, click on "Inbox," and then select the type of account you want to connect - personal or shared (if you are logged in as an administrator). See the explanations above for more details.
+### General Config
+
+- **Account Type - Choose connection type**: There are 3 account connection types in Assentir CRM which you will be able to choose and configure based on the email type you want to sync and send emails from.
+  + GMAIL
+  + IMAP
+  + Outlook
+<Note>
+Each account connection type should be properly optimized based on the connection requirements. Choose the appropriate account connection type; for example, do not use an IMAP connection to connect to a Gmail account via the IMAP protocol.
+</Note>
+- ** Sync emails from**: Select the period from when you want to sync emails
+  - Now: Sync starts for the emails from the current time.
+  - 1 month ago
+  - 3 months ago
+  - 6 months ago
+<Warning>
+ You can not edit the period selected once you create the mailbox.
+</Warning>
+- **Create Contact record if the record does not exist**: Indicates whether to create a contact in Assentir CRM if the sender of the email address does not exist as a contact.
+- **Username**: Only fill this field if you are using an exchange server where a username is required to authenticate instead of the email address.
+
+### IMAP Connection Config
+To connect your inbox to Assentir CRM via IMAP, your email server must support IMAP (Internet Message Access Protocol) and SMTP (Simple Mail Transfer Protocol). Below, you'll find the requirements for connecting your inbox using IMAP.- **Email Address**
+- Password
+- Username
+- **Incoming Mail (IMAP)**
+  - Server
+  - Port
+  - Encryption
+- **Outgoing Mail (SMTP)**
+  - Server
+  - Port
+  - Encryption
+- **Allow non-secure certificate**: In the case that your SSL certificates are not signed by a Certificate Authority, there is an option to allow a non-secure certificate when initiating the connection.
+
+After all of the required fields are populated, click the Test Connection button located at the bottom to test the connection and retrieve the available folders in your mailbox account.
+
+<Note>
+ The emails in the trash and spam folder are not synced at the 1st time sync.
+</Note>
+
+### Active Folders
+The active folders are the folders that will be visible in the Assentir CRM email client and also the folders that you wish to synchronize.
+
+![Select Active Email Folders on Assentir](/images/email-setup/active-email-folders.jpg)
+
+<Warning>
+When sending emails via Assentir CRM, even if the sent folder is not marked as the active folder, the email will still be saved on your remote server and in the Assentir CRM installation.
+</Warning>
+
+### Email Signature
+The staff members can set up an email signature to be automatically included in outgoing emails.
+
+### Primary Email Account
+If you have multiple email accounts connected, you can designate one as the primary account. By setting a primary account in Assentir CRM, it will always be displayed first and will be the default selection when you visit the inbox feature. You will see emails from the primary account by default.
+
+To mark the account as primary follow the steps below.
+1. Click the Inbox menu item.
+2. Click the right side three dots button and choose Manage Accounts.
+3. Toggle the primary switch option on the account you want to mark as primary.
+
+![mark-email-account-as-primary](/images/email-setup/mark-email-account-as-primary.jpeg)
+
+### Authentication Failures
+If Assentir CRM fails to connect to the email account, for example, via IMAP due to invalid access tokens, the account will be disabled. A message will be displayed indicating that the authentication failed and that the account requires re-authentication.
+
+In such cases, you will need to re-connect the account by clicking on the "Re-Connect" button.
+
+If the account is of type IMAP, you will need to re-test the connection, select the folders again, and then click "Connect" in the account modal to re-connect. However, if the account is of type Google or Microsoft, you will be redirected for authentication.
+
+
+### Limitations 
+- Actions taken on past emails in the email client do not sync with Assentir CRM.
+- Draft folders are not supported or synced, and you cannot send or create messages via the Draft folder.
+- When using Gmail connection type, you cannot apply labels as in the Gmail interface; you can only move messages to specific labels like in a regular mail client.
+- When a user is deleted, personal email accounts are also deleted along with all their messages.
+- Changes to folders are synchronized hourly.
+- IMAP connections cannot sync remotely renamed folders. If a folder is renamed, it will be deleted from the Assentir CRM database, and a new folder will be created to sync the messages.
+- For Outlook connections, FROM HEADERS cannot be configured; the from name will be shown as in Outlook web.
